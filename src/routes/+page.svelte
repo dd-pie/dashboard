@@ -1,7 +1,5 @@
 <script>
     export let data
-
-    console.log('projects', data.projects[0].productOwners[0])
 </script>
 
 
