@@ -2,7 +2,8 @@
     --cmd: #fff021;
     --fdnd: #66e5bf;
     --mdd: #085dc4;
-    --heigth: 0
+    --heigth: 0;
+    --width: 0;
 }
 
 body {
