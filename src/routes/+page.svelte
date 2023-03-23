@@ -178,10 +178,15 @@ header {
     top: 0;
     margin:0 -1rem
 }
+main {
+    margin-top: 2rem;
+}
 
-
-h1, h2, h3 {
+h1, h2 {
     margin-left: .5rem;
+    font-weight: normal;
+    font-size: 1.5rem;
+    margin: 0;
 }
 
 h1 {
@@ -554,9 +559,9 @@ select {
 /* breakpoint 1 */
 @media (min-width:60em) {
     main {
-        margin-top: 6rem;
+        margin-top:0;
     }
-    main,
+    main div,
     footer ul {
         display: grid;
         gap: 2em;
