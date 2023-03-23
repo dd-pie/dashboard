@@ -7,6 +7,11 @@ export const load = async () => {
       id
       title
       projectStatus
+      productOwners {
+        firstName
+        prefix
+        surname
+      }
       organization {
         name
       }
