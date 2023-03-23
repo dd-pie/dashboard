@@ -5,7 +5,7 @@
 
 <main>
     <header>
-        <h1><strong>Partners in Education</strong> / <em class="fdnd">FDND</em> / <em class="cmd">CMD</em> / <em class="mdd">MDD</em> </h1>
+        <h1><strong>PIE Family</strong> / <em class="fdnd">FDND</em> / <em class="cmd">CMD</em> / <em class="mdd">MDD</em> </h1>
 
         <nav>
             <ul>
