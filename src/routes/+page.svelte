@@ -183,14 +183,14 @@ main {
 }
 
 h1, h2 {
-    margin-left: .5rem;
+    margin-left: .5rem !important; /* yuck*/
     font-weight: normal;
     font-size: 1.5rem;
     margin: 0;
 }
 
 h1 {
-margin: 0 .5rem;  
+margin: 0;  
 font-size: 1.5rem;
 text-transform: uppercase;
 }
