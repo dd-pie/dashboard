@@ -15,6 +15,9 @@ export const load = async () => {
       organization {
         name
       }
+      courses {
+        abbreviation
+      }
     }
   }`
     const endpoint = 'https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clarwzlzm7q2k01td0dlkb5tx/master'

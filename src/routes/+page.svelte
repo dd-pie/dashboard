@@ -1,5 +1,7 @@
 <script>
     export let data
+
+    console.log(data.projects[0].courses[0])
 </script>
 
 
@@ -123,15 +125,28 @@
                         <li>
                             <a href="{project.id}">
                                 <strong>{project.title}</strong>
-                                {#if project.organization}
-                                    <span>{project.organization.name}</span>
-                                {:else if project.productOwners.length > 0 }
-                                    <span>
-                                        {#if project.productOwners[0].firstName}{project.productOwners[0].firstName}{/if}
-                                        {#if project.productOwners[0].prefix}{project.productOwners[0].prefix}{/if} 
-                                        {#if project.productOwners[0].surname}{project.productOwners[0].surname}{/if}
-                                    </span>
-                                {/if}
+                                <div>
+                                    {#if project.organization}
+                                        <span>{project.organization.name}</span>
+                                    {/if}
+
+                                    {#if project.productOwners.length > 0} 
+                                        <span>
+                                            {#if project.productOwners[0].firstName}{project.productOwners[0].firstName}{/if}
+                                            {#if project.productOwners[0].prefix}{project.productOwners[0].prefix}{/if} 
+                                            {#if project.productOwners[0].surname}{project.productOwners[0].surname}{/if}
+                                        </span>
+                                    {/if}
+
+                                    {#if project.courses.length > 0}
+                                    
+                                        {#each project.courses as course}
+                                            {#if course.abbreviation.length > 0}
+                                                <em class={course.abbreviation}>{course.abbreviation}</em>
+                                            {/if}
+                                        {/each}
+                                    {/if}
+                                </div>
                             </a>
                         </li>
                     {/if}
@@ -148,15 +163,19 @@
                     <li>
                         <a href="{project.id}">
                             <strong>{project.title}</strong>
-                            {#if project.organization}
-                                <span>{project.organization.name}</span>
-                            {:else if project.productOwners.length > 0} 
-                                <span>
-                                    {#if project.productOwners[0].firstName}{project.productOwners[0].firstName}{/if}
-                                    {#if project.productOwners[0].prefix}{project.productOwners[0].prefix}{/if} 
-                                    {#if project.productOwners[0].surname}{project.productOwners[0].surname}{/if}
-                                </span>
-                            {/if}
+
+                            <div>
+                                {#if project.organization}
+                                    <span>{project.organization.name}</span>
+                                {:else if project.productOwners.length > 0} 
+                                    <span>
+                                        {#if project.productOwners[0].firstName}{project.productOwners[0].firstName}{/if}
+                                        {#if project.productOwners[0].prefix}{project.productOwners[0].prefix}{/if} 
+                                        {#if project.productOwners[0].surname}{project.productOwners[0].surname}{/if}
+                                    </span>
+                                {/if}
+                            </div>
+                            
                         </a>
                     </li>
                     {/if}
@@ -438,9 +457,14 @@ ul > li > a em.client {
     text-transform: capitalize;
 }
 
-ul > li > a em.fdnd { background-color:var(--fdnd); }
-ul > li > a em.cmd { background-color:var(--cmd); }
-ul > li > a em.mdd { background-color:var(--mdd); color:#fff }
+a em {
+    position: absolute;
+    right: 0;
+    color:#333
+}
+a em.fdnd { background-color:var(--fdnd); }
+a em.cmd { background-color:var(--cmd); }
+a em.mdd { background-color:var(--mdd); color:#fff }
 
 ul a:before {
     content:'';
