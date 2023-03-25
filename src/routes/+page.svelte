@@ -128,7 +128,6 @@
                                 <div>
                                     {#if project.organization}
                                         <span>{project.organization.name}</span>
-                                    {/if}
 
                                     {:else if project.productOwners.length > 0} 
                                         <span>
