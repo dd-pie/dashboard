@@ -2,9 +2,30 @@
     export let data
 </script>
 
-<div>
     <section>
-        <h2>Projecten</h2>
+        <h2>Nieuwe partners</h2>
+
+        <ul>
+            <li><a href="/">...</a></li>
+            <li><a href="/">...</a></li>
+            <li><a href="/">...</a></li>
+            <li><a href="/">...</a></li>
+        </ul>   
+    </section>
+
+    <section>
+        <h2>Nieuwe leads</h2>
+
+        <ul>
+            <li><a href="/">...</a></li>
+            <li><a href="/">...</a></li>
+            <li><a href="/">...</a></li>
+            <li><a href="/">...</a></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Nieuwe projecten</h2>
 
         <ul>
             {#each data.projects as project}
@@ -41,7 +62,7 @@
     </section>
 
     <section>     
-        <h2>Design Challenges</h2>
+        <h2>Nieuwe design challenges</h2>
 
         <ul>
             {#each data.projects as project}
@@ -68,7 +89,9 @@
             {/each}
         </ul>
     </section> 
-</div>
+
+
+
 
 <style>
 

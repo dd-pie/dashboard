@@ -9,12 +9,12 @@
 </main>
 
 <style>
-main {
 
-}
 @media (min-width:60em) {
     main {
-        max-width:50vw
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap:2rem
     }
 }
 </style>

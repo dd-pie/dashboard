@@ -3,7 +3,7 @@ import { client } from '$lib/utils/client'
 export const load = async () => {
 	const query = `
   query {
-    projects (first:100){
+    projects (last:8){
       id
       title
       projectStatus
