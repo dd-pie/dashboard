@@ -2,16 +2,34 @@
     --cmd: #fff021;
     --fdnd: #66e5bf;
     --mdd: #085dc4;
-    --heigth: 0
+    --heigth: 0;
+    --width: 0;
 }
 
 body {
-    font-family: Verdana, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-family: arial;
     font-weight: 400;
-    font-size: 2em;
+    font-size:1em;
     margin: 0;
+    padding-top:9rem;
     color: #333;
-    padding-bottom: 2rem;
-    padding-top:6rem;
     background-color: #eee;
+}
+
+h2 {
+    margin-left: .5rem !important; /* yuck*/
+    font-weight: normal;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+@media (min-width:60em) {
+    body {
+        padding: 5rem 1rem 0;
+    }
+
+    main {
+        margin-top:2rem;
+    }
 }
