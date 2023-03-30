@@ -155,38 +155,29 @@ nav {
     font-size: .9rem;
 }
 
-ul {
+nav ul {
     margin:0;
     padding:0;
     overflow-x:scroll;
     display:flex;
+    flex-direction:row;
     list-style: none;
 }
-li {
+nav li {
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: .5rem;
     position: relative;
 }
-li a,
-li a:active, 
-li a:visited {
-    color:#fff;
+
+nav li a {
+    color: #fff;
     white-space: nowrap;
     margin-right: 0;
     text-decoration: none;
 }
-li:hover {
-    background-color: #fff;
-}
-i.active {
-    background-color: #eee;
-}
-li:hover a,
-li.active a {
-    color: #333;
-}
+
 
 /* form */
 header > form {
