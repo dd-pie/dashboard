@@ -7,6 +7,7 @@ export const load = async () => {
       organizations (first:100){
         name
         slug
+        companyType
       }
     }`
 
