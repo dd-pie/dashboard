@@ -3,11 +3,11 @@
 
     <nav>
         <ul>
-            <li><a href="./">Dashboard</a></li>
-            <li><a href="./partners">Partners</a></li>
-            <li><a href="./projecten">Projecten</a></li>
-            <li><a href="./design-challenges">Design challenges</a></li>
-            <li><a href="./documenten">Documenten</a></li>
+            <li><a href="/">Dashboard</a></li>
+            <li><a href="/partners">Partners</a></li>
+            <li><a href="/projecten">Projecten</a></li>
+            <li><a href="/design-challenges">Design challenges</a></li>
+            <li><a href="/documenten">Documenten</a></li>
         </ul>
     </nav>
 

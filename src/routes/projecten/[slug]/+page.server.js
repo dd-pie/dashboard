@@ -1,29 +1,46 @@
 import { client } from '$lib/utils/client'
+import { HYGRAPH_ENDPOINT } from '$env/static/private'
 
-export const load = async ({slug}) => {
+export const load = async ({params: {slug}}) => {
+
 	const query = `
-  query {
-    project (where: {slug: $slug}){
-      id
-      title
-      projectStatus
-      productOwners {
-        firstName
-        prefix
-        surname
+    query Project {
+      project(where: {slug: "${slug}"}){
+        id
+        title
+        briefing {
+          html
+        }
+        projectStatus
+        productOwners {
+          firstName
+          prefix
+          surname
+        }
+        organization {
+          name
+        }
+        programmes {
+          name
+          course {
+            abbreviation
+          }
+        }
+        visual {
+          url(transformation: { document: { output: { format: png } } })
+          thumbnail: url(
+            transformation: {
+              image: { resize: { width: 100, fit: clip } }
+              document: { output: { format: png } }
+            }
+          )
+        }
       }
-      organization {
-        name
-      }
-      courses {
-        abbreviation
-      }
-    }
-  }`
-    const endpoint = 'https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clarwzlzm7q2k01td0dlkb5tx/master'
+    }`
 
-    const data = await client({ query: query, fetch: fetch, endpoint: import.meta.env.PRIVATE_VITE_HYPGRAPH_ENDPOINT });
+    const data = await client({ query: query, variables:{slug: slug}, fetch: fetch, endpoint: HYGRAPH_ENDPOINT });
     
+    console.log('DATA', data)
     return {
         ...data
     }

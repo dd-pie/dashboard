@@ -8,7 +8,7 @@
     <ul>
         {#each data.projects as project}
             <li>
-                <a href="{project.id}">
+                <a href="projecten/{project.slug}">
                     <strong>{project.title}</strong>
                     <div>
                         {#if project.organization}
@@ -23,7 +23,6 @@
                         {/if}
 
                         {#if project.courses.length > 0}
-                        
                             {#each project.courses as course}
                                 {#if course.abbreviation.length > 0}
                                     <em class={course.abbreviation}>{course.abbreviation}</em>

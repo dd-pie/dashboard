@@ -7,6 +7,7 @@ export const load = async () => {
       projects (where: {projectStatus: active}, first:100){
         id
         title
+        slug
         projectStatus
         productOwners {
           firstName
