@@ -1,13 +1,14 @@
 <script>
     export let data
+
+    console.log(data.pendingProjects)
 </script>
 
 <section>
     <h2>Nieuwe projecten</h2>
 
     <ul>
-        {#each data.projects as project}
-            {#if project.projectStatus == 'active'}
+        {#each data.activeProjects.projects as project}
                 <li>
                     <a href="projecten/{project.slug}">
                         <strong>{project.title}</strong>
@@ -34,19 +35,18 @@
                         </div>
                     </a>
                 </li>
-            {/if}
         {/each}
     </ul>
+    <a href="/projecten">Bekijk alle projecten</a>
 </section>
 
 <section>     
     <h2>Nieuwe design challenges</h2>
 
     <ul>
-        {#each data.projects as project}
-            {#if project.projectStatus == 'pending'}
+        {#each data.pendingProjects.projects as project}
             <li>
-                <a href="{project.id}">
+                <a href="design-challenges/{project.slug}">
                     <strong>{project.title}</strong>
 
                     <div>
@@ -63,7 +63,7 @@
                     
                 </a>
             </li>
-            {/if}
         {/each}
     </ul>
+    <a href="/design-challenges">Bekijk alle design-challenges</a>
 </section> 

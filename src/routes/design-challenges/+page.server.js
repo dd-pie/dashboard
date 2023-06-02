@@ -4,7 +4,7 @@ export const load = async () => {
 	const query = `
   query {
     projects (where: {projectStatus: pending}, first:100){
-      id
+      slug
       title
       projectStatus
       productOwners {

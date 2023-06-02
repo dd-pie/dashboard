@@ -8,7 +8,7 @@
     <ul>
         {#each data.projects as project}
             <li>
-                <a href="{project.id}">
+                <a href="design-challenges/{project.slug}">
                     <strong>{project.title}</strong>
 
                     <div>
