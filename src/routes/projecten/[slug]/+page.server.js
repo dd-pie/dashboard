@@ -17,6 +17,11 @@ export const load = async ({params: {slug}}) => {
           prefix
           surname
         }
+        accountManagers {
+          firstName
+          prefix
+          surname
+        }
         organization {
           name
         }
@@ -40,7 +45,6 @@ export const load = async ({params: {slug}}) => {
 
     const data = await client({ query: query, variables:{slug: slug}, fetch: fetch, endpoint: HYGRAPH_ENDPOINT });
     
-    console.log('DATA', data)
     return {
         ...data
     }

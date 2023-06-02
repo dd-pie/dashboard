@@ -9,7 +9,7 @@
         {#each data.projects as project}
             {#if project.projectStatus == 'active'}
                 <li>
-                    <a href="{project.id}">
+                    <a href="projecten/{project.slug}">
                         <strong>{project.title}</strong>
                         <div>
                             {#if project.organization}

@@ -5,6 +5,7 @@ export const load = async () => {
   query {
     projects (last:8){
       id
+      slug
       title
       projectStatus
       productOwners {
