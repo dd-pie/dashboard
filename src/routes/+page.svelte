@@ -41,7 +41,7 @@
 </section>
 
 <section>     
-    <h2>Nieuwe design challenges</h2>
+    <h2>Nieuwe challenges</h2>
 
     <ul>
         {#each data.pendingProjects.projects as project}

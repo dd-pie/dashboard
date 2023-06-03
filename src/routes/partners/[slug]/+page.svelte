@@ -14,6 +14,9 @@
 </section>
 
 <style>
+    section {
+        padding-left: .5rem;
+    }
     section h2 {
         margin:0 !important
     }

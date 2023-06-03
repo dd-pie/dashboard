@@ -8,7 +8,7 @@
     <h2>{project.title}</h2>
 
     {#if project.visual}
-    <img src="{project.visual.url}" alt="{project.title}">
+    <img src="{project.visual.url}" alt="{project.title}" height="400" width="600">
     {/if}
 
     <h3>Opdrachtgever</h3>
@@ -40,8 +40,9 @@
         </span>
     {/if}
 
-    <h3>Design briefing</h3>
     {#if project.briefing}
+    <h3>Design briefing</h3>
+    
     {@html project.briefing.html}
     {/if}
 
@@ -56,15 +57,17 @@
 </section>
 
 <style>
+    section {
+        padding-left: .5rem;
+    }
     section h2 {
         margin:0 !important
-    }
-    h3 {
-        margin-bottom: .5rem;
     }
     img {
         display:block;
         margin:1rem 0;
-        border:1px solid #333
+        border:1px solid #333;
+        width:66vw;
+        height:44vw
     }
 </style>
