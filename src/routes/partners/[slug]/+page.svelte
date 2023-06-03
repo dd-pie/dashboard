@@ -6,9 +6,9 @@
     
 <section>
     <h2>{organization.name}</h2>
-    <h3>Beschrijving</h3>
     {#if organization.description}
-        {@html organization.description.html}
+    <h3>Beschrijving</h3>
+    {@html organization.description.html}
     {/if}
     
 </section>

@@ -22,8 +22,8 @@
         </span>
     {/if}
 
-    <h3>Product Owners</h3>
     {#if project.productOwners.length > 0} 
+    <h3>Product Owners</h3>
         <span>
             {project.productOwners[0].firstName}
             {project.productOwners[0]?.prefix || " "}
@@ -31,23 +31,22 @@
         </span>
     {/if}
 
-    <h3>Account managers </h3>
     {#if project.accountManagers.length > 0} 
-        <span>
-            {project.accountManagers[0].firstName}
-            {project.accountManagers[0]?.prefix || " "}
-            {project.accountManagers[0].surname || " "}
-        </span>
+    <h3>Account managers </h3>
+    <span>
+        {project.accountManagers[0].firstName}
+        {project.accountManagers[0]?.prefix || " "}
+        {project.accountManagers[0].surname || " "}
+    </span>
     {/if}
 
     {#if project.briefing}
     <h3>Design briefing</h3>
-    
     {@html project.briefing.html}
     {/if}
 
-    <h3>Onderwijsprogramma's</h3>
     {#if project.programmes.length > 0}
+    <h3>Onderwijsprogramma's</h3>
     <ul>
     {#each project.programmes as programme}
         <li><a href="/">{programme.name} <em class={programme.course.abbreviation}>{programme.course.abbreviation}</em></a></li>
