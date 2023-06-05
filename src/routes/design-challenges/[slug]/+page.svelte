@@ -12,8 +12,8 @@
     {/if}
 
     <h3>Opdrachtgever</h3>
-    {#if project.organization}
-        <span>{project.organization.name}</span>
+    {#if project.organizations.length > 0}
+        <span>{project.organizations[0].name}</span>
     {:else if project.productOwners.length > 0} 
         <span>
             {project.productOwners[0].firstName}

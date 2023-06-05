@@ -22,7 +22,7 @@ export const load = async ({params: {slug}}) => {
           prefix
           surname
         }
-        organization {
+        organizations {
           name
         }
         programmes {

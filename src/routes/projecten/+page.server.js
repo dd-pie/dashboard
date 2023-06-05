@@ -14,7 +14,7 @@ export const load = async () => {
           prefix
           surname
         }
-        organization {
+        organizations {
           name
         }
         courses {
