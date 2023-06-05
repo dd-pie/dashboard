@@ -1,7 +1,5 @@
 <script>
     export let data
-
-    console.log(data.pendingProjects)
 </script>
 
 <section>
@@ -15,7 +13,6 @@
                         <div>
                             {#if project.organization}
                                 <span>{project.organization.name}</span>
-
                             {:else if project.productOwners.length > 0} 
                                 <span>
                                     {#if project.productOwners[0].firstName}{project.productOwners[0].firstName}{/if}
@@ -25,7 +22,6 @@
                             {/if}
 
                             {#if project.courses.length > 0}
-                            
                                 {#each project.courses as course}
                                     {#if course.abbreviation.length > 0}
                                         <em class={course.abbreviation}>{course.abbreviation}</em>
