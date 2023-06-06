@@ -22,11 +22,16 @@
                         {/if}
 
                         {#if project.courses.length > 0}
+                        <ul>
                             {#each project.courses as course}
+
                                 {#if course.abbreviation.length > 0}
+                                <li>
                                     <em class={course.abbreviation}>{course.abbreviation}</em>
+                                </li>
                                 {/if}
                             {/each}
+                        </ul>
                         {/if}
                     </div>
                 </a>
@@ -34,12 +39,3 @@
         {/each}
     </ul>
 </section>
-
-<style>
-    em {
-        font-size: .8em;
-        background-color: #eee;
-        right:-.5rem;
-        color:#000
-    }
-</style>

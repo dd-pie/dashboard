@@ -7,6 +7,9 @@ export const load = async () => {
       organizations (first:100, where: {lead: true}){
         name
         slug
+        description {
+          html
+        }
         companyType
       }
     }`

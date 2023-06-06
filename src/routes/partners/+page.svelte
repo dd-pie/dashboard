@@ -12,17 +12,8 @@
             <li>
                 <a href="/partners/{organization.slug}">
                     <strong>{organization.name}</strong>
-                    <em>{organization.companyType}</em>
                 </a>
             </li>
         {/each}
     </ul>
 </section>
-
-<style>
-    em {
-        font-size: .8em;
-        background-color: #eee;
-        right:-.5rem
-    }
-</style>

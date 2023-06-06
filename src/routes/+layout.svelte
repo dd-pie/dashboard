@@ -12,9 +12,9 @@
 
 @media (min-width:60em) {
     main {
-        display:grid;
+        /* display:grid;
         grid-template-columns: repeat(2, 1fr);
-        gap:2rem
+        gap:2rem */
     }
 }
 </style>
