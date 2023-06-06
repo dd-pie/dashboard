@@ -1,6 +1,6 @@
 <script>
     export let data
-    
+
     const {organization} = data
 </script>
     

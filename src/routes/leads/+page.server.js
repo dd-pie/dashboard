@@ -4,7 +4,7 @@ import { HYGRAPH_ENDPOINT } from '$env/static/private'
 export const load = async () => {
 	const query = `
     query {
-      organizations (first:100, where: {lead: false}){
+      organizations (first:100, where: {lead: true}){
         name
         slug
         companyType

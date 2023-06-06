@@ -3,7 +3,7 @@
 </script>
     
 <section>
-    <h2>Projecten</h2>
+    <h2>Projecten 2022 - 2023</h2>
 
     <ul>
         {#each data.projects as project}
