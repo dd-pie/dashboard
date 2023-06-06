@@ -223,7 +223,7 @@ select {
     border:none;
 }
 
-@media (min-width:60em) {
+@media (min-width:50em) {
     h1 strong {
         display: inline;
     }

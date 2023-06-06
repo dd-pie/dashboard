@@ -17,3 +17,16 @@
         {/each}
     </ul>
 </section>
+
+<style>
+    section {
+            max-width: 30em;
+        }
+    @media (min-width:60em) {
+        
+        section > ul {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+    }
+</style>
