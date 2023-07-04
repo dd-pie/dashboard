@@ -10,7 +10,7 @@
     <ul>
         {#each organizations as organization}
             <li>
-                <a href="/partners/{organization.slug}">
+                <a href="/leads/{organization.slug}">
                     <strong>{organization.name}</strong>
                 </a>
             </li>

@@ -84,6 +84,54 @@
     </a>
 </section> 
 
+<section>
+    <h2>Nieuw partners</h2>
+
+    <ul>
+        {#each data.partners.organizations as partner}
+            <li>
+                <a href="partners/{partner.slug}">
+                    <strong>{partner.name}</strong>
+                </a>
+            </li>
+        {/each}
+    </ul>
+
+    <a href="/partners">
+        Bekijk alle partners
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M5 12l14 0" />
+            <path d="M15 16l4 -4" />
+            <path d="M15 8l4 4" />
+        </svg>
+    </a>
+</section>
+
+<section>
+    <h2>Nieuw leads</h2>
+
+    <ul>
+        {#each data.leads.organizations as lead}
+            <li>
+                <a href="leads/{lead.slug}">
+                    <strong>{lead.name}</strong>
+                </a>
+            </li>
+        {/each}
+    </ul>
+
+    <a href="/leads">
+        Bekijk alle leads
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M5 12l14 0" />
+            <path d="M15 16l4 -4" />
+            <path d="M15 8l4 4" />
+        </svg>
+    </a>
+</section>
+
 <style>
     section > a {
         margin-bottom: 2rem;
